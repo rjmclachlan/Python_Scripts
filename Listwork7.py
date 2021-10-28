@@ -2,12 +2,12 @@
 
 bowling_scores=[165,189,206,206,185,189,219,225,300,219]
 bowling_scores.sort()
-
+#honestly, I don't get how this works, so agian need practi  with one line loops
 dictionary_values = {x:bowling_scores.count(x) for x in bowling_scores}
 print(dictionary_values)
 
 
-#another way
+#another way, makes a little more sense
 b = {}
 for item in bowling_scores:
     b[item] = b.get(item, 0) + 1
