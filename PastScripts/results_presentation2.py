@@ -3,9 +3,9 @@ import pandas as pd
 from matplotlib.dates import DateFormatter
 
 df = pd.DataFrame({
-    'Interval': [10, 100, 1_000, 10_000, 100_000, 1_000_000, 10_000_000],
-    'v1_time': [0.000016, 0.000047, 0.000415, 0.004373, 0.041759, 0.414038, 4.50987],
-    'v2_time': [0.000011, 0.000039, 0.000378, 0.003741, 0.042440, 0.386357, 3.728485],
+    'Interval': ['100m', '200m', '300m', '400m', '500m'],
+    'v1_time': [38, 82, 114, 162, 195],
+    'v2_time': [36, 74, 111, 138, 190],
 })
 
 # Configure plot background
@@ -27,7 +27,7 @@ ax.set_ylabel('Time in Seconds', fontsize=12, color='Blue')
 ax.set_xlabel('Number of loops', fontsize=12, color='Blue')
 # myFmt = DateFormatter("%H:%M")
 # ax.xaxis.set_major_formatter(myFmt)
-
+"""
 plt.xscale('log')
 plt.yscale('log')
 
@@ -39,6 +39,7 @@ plt.xticks(ticks=x_ticks, labels=x_labels, fontsize=8)
 y_ticks = [.0005, .005, 5]
 y_labels = [.0005, .005, 5]
 plt.yticks(ticks=y_ticks, labels=y_labels)
+"""
 
 ax.legend(loc='lower right')
 # Display graph1
